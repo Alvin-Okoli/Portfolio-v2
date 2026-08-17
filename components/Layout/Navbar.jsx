@@ -27,7 +27,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="md:w-full w-[95%] h-15 flex justify-center items-center px-2 border border-border-primary rounded-full bg-bg-tint md:relative sticky top-4">
+    <nav className="md:w-full w-[100%] h-15 flex justify-center items-center px-2 border border-border-primary rounded-full bg-bg-tint md:relative sticky md:top-">
       <div className="h-full w-[30%] flex justify-start items-center">
         <motion.div
           whileHover={{ scale: 0.95 }}
