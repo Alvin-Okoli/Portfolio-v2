@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${libreBaskerville.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col selection:bg-black/50 selection:text-white">{children}</body>
     </html>
   );
 }

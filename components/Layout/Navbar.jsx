@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { getGreeting } from "@/lib/utils";
 import { easing } from "@/lib/constants";
+import { Menu } from "lucide-react";
+import MobileMenu from "./MobileMenu";
 const Navbar = () => {
   const MotionImage = motion(Image);
   const [show, setShow] = useState(false);
@@ -81,7 +83,7 @@ const Navbar = () => {
               </motion.div>
             </div>
 
-            <div className="h-full w-[70%] flex justify-end items-center gap-4 mr-4">
+            <div className="h-full w-[70%] md:flex hidden justify-end items-center gap-4 mr-4">
               {links.map((item, idx) => (
                 <Link
                   key={idx}
@@ -91,6 +93,11 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+            </div>
+            <div className="h-full w-[70%] flex md:hidden justify-end items-center gap-4 mr-4">
+              <MobileMenu links={links}>
+                <Menu className="text-text-primary" />
+              </MobileMenu>
             </div>
           </motion.div>
         ) : (
