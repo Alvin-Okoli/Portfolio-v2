@@ -11,7 +11,7 @@ export default async function Home({ searchParams }) {
       <div className="md:w-[40%] w-full md:h-full h-fit md:p-4 p-0 md:fixed relative left-0 top-0 flex flex-col justify-start items-center gap-15">
         <Navbar />
 
-        <HeroSections />
+        {!display && <HeroSections />}
       </div>
 
       <div className="md:w-[60%] w-full md:h-full h-fit md:flex hidden flex-col gap-4">

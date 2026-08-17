@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Magnetic } from "../motion-primitives/magnetic";
+import { easing } from "@/lib/constants";
 
 const PrimaryButton = ({ text }) => {
   const [isHovered, setIsHovered] = useState(false);
   const MotionArrowUpRight = motion(ArrowUpRight);
-  const easing = [0.22, 0.61, 0.36, 1];
   const transition = {
     duration: 0.4,
     ease: easing,
