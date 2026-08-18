@@ -27,7 +27,7 @@ const PrimaryButton = ({ text }) => {
           duration: 0.4,
           ease: easing,
         }}
-        className="p-2 flex gap-3 justify-center items-center text-[15px] text-white bg-primary rounded-full bg-black cursor-pointer relative overflow-hidden"
+        className="p-2 flex gap-3 justify-center items-center text-[15px] text-white bg-primary rounded-full cursor-pointer relative overflow-hidden"
       >
         <motion.span
           animate={{ color: isHovered ? "#000000" : "#ffffff" }}

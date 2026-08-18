@@ -24,7 +24,7 @@ const HeroSections = () => {
       <AnimateContent idx={3}>
         <p className="md:w-[90%] w-full md:text-[15px] text-[13px] text-text-secondary text-pretty ">
           {" "}
-          {CMS.about}
+          {CMS.desc}
         </p>
       </AnimateContent>
 

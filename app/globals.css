@@ -7,13 +7,16 @@
 :root {
 
   --bg-primary:#ffffff;
-  --bg-secondary:#f7f7f7;
+  --bg-secondary:hsl(0, 0%, 97%);
   --bg-tint:hsl(0, 0%, 99%);
-
+  --bg-card:hsla(0, 0%, 90%);
   --text-primary:hsl(0, 0%, 5%);
   --text-secondary:hsl(0, 0%, 50%);
 
   --border-primary:hsl(0, 0%, 85%);
+
+
+
 
   --background:oklch(1 0 0);
 
@@ -92,11 +95,15 @@
   --color-bg-primary: var(--bg-primary);
   --color-bg-secondary: var(--bg-secondary);
   --color-bg-tint: var(--bg-tint);
+  --color-bg-card: var(--bg-card);
 
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
 
   --color-border-primary: var(--border-primary);
+
+
+
 
   --color-sidebar-ring:var(--sidebar-ring);
 
@@ -235,6 +242,35 @@
 
   --sidebar-ring:oklch(0.556 0 0);
 }
+
+
+
+
+/* Scrollbar hidden by default */
+.hsb2::-webkit-scrollbar {
+  width: 5px;
+}
+
+.hsb2::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hsb2::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+/* Show scrollbar when the main div is hovered */
+.hsb2:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.123);
+}
+
+/* Thumb hover effect */
+.hsb2:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
 
 @layer base {
   * {

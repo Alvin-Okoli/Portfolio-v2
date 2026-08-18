@@ -10,7 +10,7 @@ const Footer = () => {
   const MotionImage = motion(Image);
 
   return (
-    <div className="w-full h-fit flex justify-between items-center px-4 absolute bottom-4 border-t border-text-secondary/30 pt-4">
+    <div className="w-[95%] h-fit flex justify-between items-center px-4 absolute bottom-4 border-t border-text-secondary/10 pt-4 bg-bg-primary">
       <Link
         href={`mailto:${CMS.email}`}
         className="text-[14px] text-text-secondary hover:text-text-primary transition-all duration-200 ease-in-out"
