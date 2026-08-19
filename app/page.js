@@ -1,6 +1,8 @@
 import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import AboutSection from "@/components/pages/HomePage/AboutSection";
+import ContactSection from "@/components/pages/HomePage/ContactSection";
+import ExperienceSections from "@/components/pages/HomePage/ExperienceSections";
 import HeroSections from "@/components/pages/HomePage/HeroSections";
 import Image from "next/image";
 
@@ -15,10 +17,10 @@ export default async function Home({ searchParams }) {
 
         {!display && <HeroSections />}
         {display === "about" && <AboutSection />}
-        {display === "experience" && null}
-        {display === "contact" && null}
+        {display === "experience" && <ExperienceSections />}
+        {display === "contact" && <ContactSection />}
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
 
       <div className="md:w-[60%] w-full md:h-full h-fit md:flex hidden flex-col gap-4">

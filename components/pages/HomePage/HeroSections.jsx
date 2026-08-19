@@ -30,7 +30,7 @@ const HeroSections = () => {
 
       <AnimateContent idx={4}>
         <div className="w-full flex gap-3 justify-start items-start mt-3">
-          <PrimaryButton text="Contact Me" />
+          <PrimaryButton magnatic={true} text="Contact Me" />
           <SecondaryButton text="Know more" />
         </div>
       </AnimateContent>

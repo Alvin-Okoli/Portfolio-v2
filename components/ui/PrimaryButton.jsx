@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Magnetic } from "../motion-primitives/magnetic";
 import { easing } from "@/lib/constants";
 
-const PrimaryButton = ({ text }) => {
+const PrimaryButton = ({ text, magnatic }) => {
   const [isHovered, setIsHovered] = useState(false);
   const MotionArrowUpRight = motion(ArrowUpRight);
   const transition = {
@@ -13,7 +13,7 @@ const PrimaryButton = ({ text }) => {
     ease: easing,
   };
   return (
-    <Magnetic>
+    <Magnetic intensity={!magnatic ? 0 : 1}>
       <motion.button
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
