@@ -5,12 +5,18 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import { easing } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
-const Footer = () => {
+const Footer = ({ className }) => {
   const MotionImage = motion(Image);
 
   return (
-    <div className="w-[95%] h-fit flex justify-between items-center px-4 absolute bottom-4 border-t border-text-secondary/10 pt-4 bg-bg-primary">
+    <div
+      className={cn(
+        "h-fit justify-between items-center px-1 absolutebottom-4 border-t border-text-secondary/10 pt-4 bg-bg-primary",
+        className,
+      )}
+    >
       <Link
         href={`mailto:${CMS.email}`}
         className="text-[14px] text-text-secondary hover:text-text-primary transition-all duration-200 ease-in-out"

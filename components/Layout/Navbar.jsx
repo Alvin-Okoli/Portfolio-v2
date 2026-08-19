@@ -56,7 +56,7 @@ const Navbar = () => {
         paddingBlock: show ? "5px" : "0x",
       }}
       transition={{ duration: 0.5, ease: easing }}
-      className="w-full h-15 flex justify-center items-center border border-border-secondary/10 rounded-full bg-bg-tint md:relative sticky overflow-hidden"
+      className="w-full h-15 flex justify-center items-center border border-border-secondary/10 rounded-full bg-bg-tint md:relative sticky overflow-hidden shrink-0"
     >
       <AnimatePresence mode="wait">
         {show ? (

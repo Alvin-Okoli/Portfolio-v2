@@ -4,9 +4,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Magnetic } from "../motion-primitives/magnetic";
 import { easing } from "@/lib/constants";
+import Link from "next/link";
 
 const PrimaryButton = ({ text, magnatic }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const MotionLink = motion(Link);
   const MotionArrowUpRight = motion(ArrowUpRight);
   const transition = {
     duration: 0.4,
@@ -14,7 +16,8 @@ const PrimaryButton = ({ text, magnatic }) => {
   };
   return (
     <Magnetic intensity={!magnatic ? 0 : 1}>
-      <motion.button
+      <MotionLink
+        href="/?display=contact"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         initial={{ backgroundColor: "#000000", scale: 1 }}
@@ -101,7 +104,7 @@ const PrimaryButton = ({ text, magnatic }) => {
           }}
           className="absolute top-1/2 -translate-y-1/2 right-2 size7 rounded-full bg-bg-secondary z-1"
         />
-      </motion.button>
+      </MotionLink>
     </Magnetic>
   );
 };

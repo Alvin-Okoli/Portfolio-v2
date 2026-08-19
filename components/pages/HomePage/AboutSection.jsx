@@ -29,39 +29,13 @@ const AboutSection = () => {
 
       <div className="w-full md:h-[380px] h-fit flex flex-col gap-2 justify-start items-center overflow-hidden">
         <AnimateContent idx={3}>
-          {/* <div className="w-full md:h-[200px] h-fit flex md:flex-row flex-col justify-center items-center md:gap-4 gap-12 p-2 bg-bg-tint border border-border-primary rounded-[8px]">
-            <div className="h-full aspect-square rounded-[6px]">
-              <Image
-                src={CMS.profilePictureSRC}
-                alt={CMS.FirstName}
-                width={200}
-                height={200}
-                className="w-full h-full object-cover rounded-[6px]"
-              />
-            </div>
-
-            <div className="h-full flex flex-col justify-between items-center">
-              <p className="text-[15px] text-text-secondary">{CMS.about}</p>
-              <div className="w-[95%] flex justify-end items-center md:mt-0 mt-8">
-                <SmallButton />
-              </div>
-            </div>
-          </div> */}
-
           <div className="h-full flex flex-col gap-3 justify-between items-center">
-            <p className="text-[16px] text-text-secondary">{CMS.about} </p>
-            <p className="text-[16px] text-text-secondary">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-              quis repudiandae omnis numquam, molestias, provident illo dolor
-              debitis nesciunt ex sapiente veritatis earum cumque ab eius fuga.
-              Reiciendis, error voluptas.
-            </p>
-            <p className="text-[16px] text-text-secondary">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-              quis repudiandae omnis numquam, molestias, provident illo dolor
-              debitis nesciunt ex sapiente veritatis earum cumque ab eius fuga.
-              Reiciendis, error voluptas.
-            </p>
+            {CMS.about.map((item, idx) => (
+              <p key={idx} className="text-[16px] text-text-secondary">
+                {item}
+              </p>
+            ))}
+
             <div className="w-[95%] flex justify-end items-center md:mt-0 mt-12">
               <SmallButton />
             </div>
