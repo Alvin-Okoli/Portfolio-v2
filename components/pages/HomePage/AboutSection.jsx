@@ -8,7 +8,7 @@ import Marquee from "react-fast-marquee";
 
 const AboutSection = () => {
   return (
-    <div className="w-full h-fit flex flex-col justify-start items-start gap-12">
+    <div className="w-full h-fit flex flex-col justify-start items-start gap-8">
       <div className="w-full flex flex-col justify-start items-start">
         <AnimateContent idx={1}>
           <h2 className="md:text-[38px] text-[24px] font-semibold text-text-primary font-heading leading-tight tracking-tighter">
@@ -22,12 +22,14 @@ const AboutSection = () => {
           </p>
         </AnimateContent>
 
-        <div className="w-[30%] h-[1px] bg-black/10 mt-6"></div>
+        <AnimateContent className="w-full" idx={2}>
+          <div className="w-[30%] h-[1px] bg-black/10 mt-6"></div>
+        </AnimateContent>
       </div>
 
       <div className="w-full md:h-[380px] h-fit flex flex-col gap-2 justify-start items-center overflow-hidden">
         <AnimateContent idx={3}>
-          <div className="w-full md:h-[200px] h-fit flex md:flex-row flex-col justify-center items-center md:gap-4 gap-12 p-2 bg-bg-tint border border-border-primary rounded-[8px]">
+          {/* <div className="w-full md:h-[200px] h-fit flex md:flex-row flex-col justify-center items-center md:gap-4 gap-12 p-2 bg-bg-tint border border-border-primary rounded-[8px]">
             <div className="h-full aspect-square rounded-[6px]">
               <Image
                 src={CMS.profilePictureSRC}
@@ -44,10 +46,29 @@ const AboutSection = () => {
                 <SmallButton />
               </div>
             </div>
+          </div> */}
+
+          <div className="h-full flex flex-col gap-3 justify-between items-center">
+            <p className="text-[16px] text-text-secondary">{CMS.about} </p>
+            <p className="text-[16px] text-text-secondary">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+              quis repudiandae omnis numquam, molestias, provident illo dolor
+              debitis nesciunt ex sapiente veritatis earum cumque ab eius fuga.
+              Reiciendis, error voluptas.
+            </p>
+            <p className="text-[16px] text-text-secondary">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+              quis repudiandae omnis numquam, molestias, provident illo dolor
+              debitis nesciunt ex sapiente veritatis earum cumque ab eius fuga.
+              Reiciendis, error voluptas.
+            </p>
+            <div className="w-[95%] flex justify-end items-center md:mt-0 mt-12">
+              <SmallButton />
+            </div>
           </div>
         </AnimateContent>
 
-        <AnimateContent className="w-full" idx={4}>
+        {/* <AnimateContent className="w-full" idx={4}>
           <div className="w-full md:h-[80px] h-fit flex justify-between items-center gap-2 p-2 bg-bg-tint border border-border-primary rounded-[8px]">
             <div className="h-full w-fit  flex justify-start items-center shrink-0">
               <span className="text-[16px] text-text-secondary">
@@ -88,7 +109,7 @@ const AboutSection = () => {
               </Marquee>
             </div>
           </div>
-        </AnimateContent>
+        </AnimateContent> */}
       </div>
     </div>
   );

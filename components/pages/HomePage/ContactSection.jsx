@@ -17,7 +17,7 @@ const ContactSection = () => {
 
   return (
     <div className="w-full h-fit flex flex-col justify-center items-start gap-4">
-      <div className="w-full flex flex-col justify-start items-start">
+      <div className="w-full flex flex-col justify-start items-start mb-4">
         <AnimateContent idx={1}>
           <h2 className="md:text-[38px] text-[24px] font-semibold text-text-primary font-heading leading-tight tracking-tighter">
             Let&apos;s Work Together

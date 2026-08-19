@@ -4,6 +4,7 @@ import AboutSection from "@/components/pages/HomePage/AboutSection";
 import ContactSection from "@/components/pages/HomePage/ContactSection";
 import ExperienceSections from "@/components/pages/HomePage/ExperienceSections";
 import HeroSections from "@/components/pages/HomePage/HeroSections";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export default async function Home({ searchParams }) {
@@ -12,7 +13,12 @@ export default async function Home({ searchParams }) {
 
   return (
     <div className="w-full px-4 py-4 gap-4 h-screen flex md:flex-row flex-col md:justify-end justify-start items-center relative font-body">
-      <div className="md:w-[40%] w-full md:h-full h-fit md:p-4 p-0 md:fixed relative left-0 top-0 flex flex-col justify-start items-center gap-12">
+      <div
+        className={cn(
+          "md:w-[40%] w-full md:h-full h-fit md:p-4 p-0 md:fixed relative left-0 top-0 flex flex-col justify-start items-center",
+          !display ? "gap-12" : "gap-8",
+        )}
+      >
         <Navbar />
 
         {!display && <HeroSections />}
